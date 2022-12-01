@@ -37,4 +37,12 @@ public class MealTest {
     Meal sut = new Meal("Lasagna", price);
     assertThrows(IllegalArgumentException.class, () -> sut.setName(name));
   }
+
+  @Test
+  public void setNameShouldThrowWhenArgumentIsLessThanThreeCharacters() {
+    int price = 225;
+    String name = "As";
+    Meal sut = new Meal("Lasagna", price);
+    assertThrows(IllegalArgumentException.class, () -> sut.setName(name));
+  }
 }
