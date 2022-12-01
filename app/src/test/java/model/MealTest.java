@@ -16,4 +16,10 @@ public class MealTest {
     int price = 225;
     assertThrows(IllegalArgumentException.class, () -> new Meal(" ", price));
   }
+
+  @Test
+  public void constructorShouldThrowWhenFirstArgumentIsLessThanThreeCharacters() {
+    int price = 225;
+    assertThrows(IllegalArgumentException.class, () -> new Meal("As", price));
+  }
 }
