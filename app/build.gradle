@@ -31,4 +31,10 @@ application {
 
 test {
     useJUnitPlatform()
+
+    // Enable sysout from tests.
+    testLogging {
+        outputs.upToDateWhen {false}
+        showStandardStreams = true
+    }
 }

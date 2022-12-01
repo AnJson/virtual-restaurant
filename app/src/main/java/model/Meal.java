@@ -4,8 +4,7 @@ public class Meal {
   private String name;
 
   public Meal (String name, int price) {
-    validateName(name);
-    this.name = name;
+    setName(name);
   }
 
   public void setName(String name) {
@@ -18,7 +17,7 @@ public class Meal {
       throw new NullPointerException("Name-argument should not be null.");
     }
 
-    if (name.trim() == "") {
+    if (name.trim().isEmpty()) {
       throw new IllegalArgumentException("Name-argument should not be an empty string.");
     }
 
