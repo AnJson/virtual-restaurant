@@ -12,7 +12,11 @@ public class Meal {
     if (name == null) {
       throw new NullPointerException("Name-argument should not be null.");
     }
-    
+
+    if (name.trim() == "") {
+      throw new IllegalArgumentException("Name-argument should not be an empty string.");
+    }
+
     this.name = name;
   }
 
