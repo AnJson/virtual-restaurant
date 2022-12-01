@@ -16,5 +16,9 @@ public class Meal {
     if (name.trim() == "") {
       throw new IllegalArgumentException("Name-argument should not be an empty string.");
     }
+
+    if (name.trim().length() < 3) {
+      throw new IllegalArgumentException("Name-argument should not be less than three characters.");
+    }
   }
 }
