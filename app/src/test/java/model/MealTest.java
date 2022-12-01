@@ -10,4 +10,10 @@ public class MealTest {
     int price = 225;
     assertThrows(NullPointerException.class, () -> new Meal(null, price));
   }
+
+  @Test
+  public void constructorShouldThrowWhenFirstArgumentIsBlankString() {
+    int price = 225;
+    assertThrows(NullPointerException.class, () -> new Meal(" ", price));
+  }
 }
