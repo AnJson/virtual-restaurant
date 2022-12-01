@@ -8,6 +8,13 @@ public class Meal {
     this.name = name;
   }
 
+  public void setName(String name) {
+    if (name == null) {
+      throw new NullPointerException("Name-argument should not be null.");
+    }
+    this.name = name;
+  }
+
   private void validateName(String name) {
     if (name == null) {
       throw new NullPointerException("Name-argument should not be null.");
