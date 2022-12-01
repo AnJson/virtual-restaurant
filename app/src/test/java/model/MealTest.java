@@ -25,14 +25,16 @@ public class MealTest {
   @Test
   public void setNameShouldThrowWhenArgumentIsNull() {
     int price = 225;
+    String name = null;
     Meal sut = new Meal("Lasagna", price);
-    assertThrows(NullPointerException.class, () -> sut.setName(null));
+    assertThrows(NullPointerException.class, () -> sut.setName(name));
   }
 
   @Test
   public void setNameShouldThrowWhenArgumentIsBlankString() {
     int price = 225;
+    String name = " ";
     Meal sut = new Meal("Lasagna", price);
-    assertThrows(IllegalArgumentException.class, () -> sut.setName(" "));
+    assertThrows(IllegalArgumentException.class, () -> sut.setName(name));
   }
 }
