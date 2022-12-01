@@ -8,6 +8,10 @@ public class Meal {
       throw new NullPointerException("Name-argument should not be null.");
     }
 
+    if (name.trim() == "") {
+      throw new IllegalArgumentException("Name-argument should not be null.");
+    }
+
     this.name = name;
   }
 }
