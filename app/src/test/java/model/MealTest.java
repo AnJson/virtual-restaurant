@@ -21,4 +21,11 @@ public class MealTest {
     int price = 225;
     assertThrows(IllegalArgumentException.class, () -> new Meal("As", price));
   }
+
+  @Test
+  public void setNameShouldThrowWhenFirstArgumentIsNull() {
+    int price = 225;
+    Meal sut = new Meal("Lasagna", price);
+    assertThrows(NullPointerException.class, () -> sut.setName(null));
+  }
 }
