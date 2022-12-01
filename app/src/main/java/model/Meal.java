@@ -12,6 +12,7 @@ public class Meal {
     if (name == null) {
       throw new NullPointerException("Name-argument should not be null.");
     }
+    
     this.name = name;
   }
 
