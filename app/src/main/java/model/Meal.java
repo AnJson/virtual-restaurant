@@ -9,18 +9,7 @@ public class Meal {
   }
 
   public void setName(String name) {
-    if (name == null) {
-      throw new NullPointerException("Name-argument should not be null.");
-    }
-
-    if (name.trim() == "") {
-      throw new IllegalArgumentException("Name-argument should not be an empty string.");
-    }
-
-    if (name.trim().length() < 3) {
-      throw new IllegalArgumentException("Name-argument should not be less than three characters.");
-    }
-
+    validateName(name);
     this.name = name;
   }
 
